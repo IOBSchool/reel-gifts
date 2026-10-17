@@ -13,7 +13,7 @@
 <link rel="canonical" href="https://iob.bio/present/germany-babyfood-note/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#f9f7ef;
@@ -66,6 +66,28 @@ p:last-child{margin-bottom:0}
 .portrait img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
 .lede{margin:28px 0 0;text-align:left;font-size:15px}
 .lede p{margin:0 0 18px}
+
+/* ---------- hero (10/20デザイン・縦書き) ---------- */
+.nw{display:inline-block}
+.hero{background:var(--bg);padding:26px 0 30px}
+.hero .eyebrow{display:inline-block;color:#fff;background:var(--accent);font-size:12.5px;font-weight:700;letter-spacing:.05em;border-radius:999px;padding:4px 15px;line-height:1.6}
+.hero .grid{display:flex;gap:12px;margin-top:20px;height:470px}
+.hero h1{writing-mode:vertical-rl;font-family:"Zen Old Mincho",serif;font-weight:700;font-size:26px;line-height:1.62;letter-spacing:.1em;height:100%;color:var(--ink);margin:0}
+.hero h1 .o{color:var(--accent)}
+.hero h1 .tcy{text-combine-upright:all}
+.hero .ph{flex:1;min-width:0;border-radius:18px;background:url("images/natsuko.jpg") 38% 15%/cover;position:relative}
+.hero .who{position:absolute;left:10px;right:10px;bottom:10px;background:rgba(255,253,248,.93);border-radius:10px;padding:8px 10px;font-size:10.5px;line-height:1.6;color:var(--ink-soft);white-space:nowrap}
+.hero .who b{font-family:"Zen Old Mincho",serif;font-size:14px;color:var(--ink)}
+.hero .q{font-family:"Zen Old Mincho",serif;font-weight:500;font-size:16px;line-height:1.8;margin:22px 0 6px;text-align:center;color:var(--ink)}
+.hero .s{font-size:13.5px;line-height:1.8;text-align:center;margin:0 0 16px;color:var(--ink-soft)}
+.hero .cta{display:block;margin-top:14px;background:var(--accent);color:#fff;text-decoration:none;text-align:center;padding:16px;border-radius:12px;font-weight:600;font-family:"Zen Old Mincho",serif;font-size:17px;letter-spacing:.04em}
+.hero .cta:hover{background:#dd5a2c}
+.hero .trust{margin:16px 0 0;font-size:11.5px;line-height:1.9;color:var(--ink-faint);letter-spacing:.03em;text-align:center}
+.lead-sec{padding:30px 0 0}
+.lead-sec .lede{margin:0}
+@media(min-width:560px){ .hero .grid{height:560px} .hero h1{font-size:30px} }
+@media(max-width:380px){ .hero .who{font-size:9.5px;padding:6px 8px} .hero .who b{font-size:12.5px} }
+@media(max-width:360px){ .hero .grid{height:430px} .hero h1{font-size:23px} }
 
 /* ---------- sections ---------- */
 section{padding:52px 0}
@@ -151,28 +173,30 @@ footer a{color:var(--ink-faint);margin:0 8px}
   <div class="wrap"><img src="images/logo_orange.png" alt="Institut für Organic Business"></div>
 </header>
 
-<!-- ============ 1. ファーストビュー＋フォーム ============ -->
-<div class="wrap">
-  <div class="fv">
-    <span class="pill">南ドイツ在住・オーガニック教育の専門家より ｜ 無料プレゼント</span>
-
-    <h1>なぜ、ドイツのドラッグストアでは<br><span class="em">ベビーフード売り場の9割</span>が<br>オーガニックなのか</h1>
-
-    <p class="sub">マツキヨより店舗数が多いドイツのドラッグストア。<br>その棚を見渡すと、ベビーフードはオーガニックで溢れている。<br>その背景を、note記事にまとめました。</p>
-
-    <p class="trust">Forbes Japan公式コラムニスト ／ 電子書籍 Kindle総合1位<br>「IFOAM」欧州本部リーダーシップ研修 日本人初選抜</p>
-
-    <div class="portrait">
-      <img src="images/natsuko.jpg" alt="レムケなつこ" width="680" height="850">
+<!-- ============ 1. ファーストビュー（10/20デザイン・縦書き） ============ -->
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">オーガニック教育の専門家より ｜ 無料プレゼント</div>
+    <div class="grid">
+      <h1>ドイツのドラッグストアは、<br>ベビーフード売り場の<br><span class="o"><span class="tcy">9</span>割がオーガニック</span></h1>
+      <div class="ph" role="img" aria-label="レムケなつこ"><div class="who"><b>レムケなつこ</b><br>ドイツ在住<br>オーガニック教育の専門家</div></div>
     </div>
+    <p class="q"><span class="nw">日本ではまだ「特別」なのに、</span><br><span class="nw">ドイツでは当たり前。この差は何だろう？</span></p>
+    <p class="s"><span class="nw">その背景を、note記事にまとめました。</span><br><span class="nw">下のフォームから無料で受け取れます。</span></p>
+    <a class="cta" href="#form">無料でnote記事を受け取る</a>
+    <p class="trust">Forbes Japan公式コラムニスト ／ 電子書籍 Kindle総合1位<br>「IFOAM」欧州本部リーダーシップ研修 日本人初選抜</p>
+  </div>
+</header>
 
+<section class="lead-sec">
+  <div class="wrap">
     <div class="lede">
       <p>マツキヨより店舗数が多いくらいのドイツのドラッグストア（dm）。なのに棚を見渡すと、オーガニックで溢れています。</p>
       <p>とくにベビーフード売り場がすごくて——棚の8〜9割がオーガニックなんです。</p>
       <p>なんでそんなことになるの？と思って調べたら、ちゃんと理由がありました。その背景を、1本のnote記事にまとめています。</p>
     </div>
   </div>
-</div>
+</section>
 
 <!-- ============ 2. フォーム（FV直下） ============ -->
 <div class="wrap">
@@ -196,7 +220,7 @@ footer a{color:var(--ink-faint);margin:0 8px}
 
     <p class="fineprint">
       ご登録のあとすぐに、記事のページをご案内するメールが届きます。届かない場合は、迷惑メールフォルダをご確認ください。<br>
-      このあと、オーガニックの届け方についてのメールをお送りします。配信はいつでも解除できます。
+      このあとも、毎日の食と暮らしに生かせるオーガニックのお話を、メールでお届けしていきます。配信はいつでも解除できます。
     </p>
   </div>
 </section>
